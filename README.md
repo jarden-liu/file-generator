@@ -21,6 +21,7 @@ e.g. /Users/user1/atom-template
 ```
   Settings -> Packages -> file-generator -> Settings -> Custom Template Path
 ```
+![Settings](https://raw.githubusercontent.com/jarden-liu/file-generator/master/img/settings.png)
 
 3.Create files with case in the directory.
 ```
@@ -72,6 +73,8 @@ Return as a lower case, period separated string.
 //=> "test.string"
 ```
 
+### header
+
 Return as a title cased, dash separated string.
 
 ```javascript
@@ -89,12 +92,13 @@ Return the string in lower case.
 ```
 
 
+
 ### base
 
 Return the string without any casing (lower case, space separated).
 
 ```javascript
-{{no}}('test string')
+{{base}}('test string')
 //=> "test string"
 ```
 
