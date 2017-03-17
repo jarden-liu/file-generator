@@ -1,0 +1,39 @@
+{
+    "name": "file-generator",
+    "main": "./lib/file-generator",
+    "version": "0.0.1",
+    "description": "Atom file generator package",
+    "keywords": [
+        "file-generator",
+        "generator",
+        "file",
+        "atom",
+        "auto",
+        "case",
+        "changecase"
+    ],
+    "activationCommands": {
+        "atom-workspace": "file-generator:show"
+    },
+    "repository": "https://github.com/jarden-liu/file-generator",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
+    },
+    "configSchema": {
+    "plugins": {
+      "type": "object",
+      "properties": {}
+    },
+    "customTemplatePath": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "dependencies": {
+    "change-case": "^3.0.1",
+    "copy": "^0.3.0",
+    "q": "^1.4.1",
+    "replace-in-file": "^2.5.0"
+  }
+}
