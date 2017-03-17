@@ -29,7 +29,7 @@ e.g. {{base}}.txt
 content : {{camel}} temp {{dot}}
 ```
 
-**Available }}s** :
+**Available Cases** :
 
 - [`camel`](#camel)
 - [`constant`](#constant)
