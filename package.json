@@ -1,7 +1,7 @@
 {
   "name": "file-generator",
   "main": "./lib/file-generator",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Atom file generator package",
   "keywords": [
     "file-generator",
