@@ -1,2 +1,0 @@
-Read file-generator README.md usage
-https://github.com/jarden-liu/file-generator.git
