@@ -2,32 +2,42 @@
 
 Atom file generator package.
 
-Create a directorys which contains a lot of files through custom templates. Templates use `case` to quickly replace keywords.}} Templates Include `camelCase`, `PascalCase`, `Title Case`, `snake_case`, `lowercase`, `UPPERCASE`, `CONSTANT_CASE` and more.
+Create a directorys which contains a lot of files through custom templates. Templates use `case` to quickly replace keywords. Templates Include `camelCase`, `PascalCase`, `Title Case`, `snake_case`, `lowercase`, `UPPERCASE`, `CONSTANT_CASE` and more.
 
 ## Installation
 
 ```
-apm install file-generator --save
+apm install file-generator
 ```
 
 ## Usage
 
 1.Create a directory for template files(Do not place or create files outside the template in this directory).
 ```
-e.g. /Users/user1/atom-template
+e.g. /Users/user1/git/atom-template
 ```
 
 2.Set the directory path to Atom file generator package settings.
 ```
   Settings -> Packages -> file-generator -> Settings -> Custom Template Path
 ```
-![Settings](https://raw.githubusercontent.com/jarden-liu/file-generator/master/img/settings.png)
 
-3.Create files with case in the directory.
+3.Enter the path to text editor.
+
+
+4.Create files with case in the directory.
 ```
-e.g. {{base}}.txt
-content : {{camel}} temp {{dot}}
+e.g. {{--base--}}.txt
+content : {{--camel--}} temp {{--dot--}}
 ```
+
+5.Click the `New Module` menu button in your atom treeview.
+
+6.Enter the name for new module.
+
+7.Some new files will be created according to the template in your project.
+
+By the way,you can read the [step.md](https://github.com/jarden-liu/file-generator/blob/master/step.md).
 
 **Available Cases** :
 
@@ -50,8 +60,8 @@ content : {{camel}} temp {{dot}}
 
 Return as a string with the separators denoted by having the next letter capitalized.
 
-```javascript
-{{camel}}('test string')
+```
+{{--camel--}}('test string')
 //=> "testString"
 ```
 
@@ -59,8 +69,8 @@ Return as a string with the separators denoted by having the next letter capital
 
 Return as an upper case, underscore separated string.
 
-```javascript
-{{constant}}('test string')
+```
+{{--constant--}}('test string')
 //=> "TEST_STRING"
 ```
 
@@ -68,8 +78,8 @@ Return as an upper case, underscore separated string.
 
 Return as a lower case, period separated string.
 
-```javascript
-{{dot}}('test string')
+```
+{{--dot--}}('test string')
 //=> "test.string"
 ```
 
@@ -77,8 +87,8 @@ Return as a lower case, period separated string.
 
 Return as a title cased, dash separated string.
 
-```javascript
-{{header}}('test string')
+```
+{{--header--}}('test string')
 //=> "Test-String"
 ```
 
@@ -86,8 +96,8 @@ Return as a title cased, dash separated string.
 
 Return the string in lower case.
 
-```javascript
-{{lower}}('TEST STRING')
+```
+{{--lower--}}('TEST STRING')
 //=> "test string"
 ```
 
@@ -97,8 +107,8 @@ Return the string in lower case.
 
 Return the string without any casing (lower case, space separated).
 
-```javascript
-{{base}}('test string')
+```
+{{--base--}}('test string')
 //=> "test string"
 ```
 
@@ -106,17 +116,17 @@ Return the string without any casing (lower case, space separated).
 
 Return as a lower case, dash separated string.
 
-```javascript
-{{param}}('test string')
+```
+{{--param--}}('test string')
 //=> "test-string"
 ```
 
 ### pascal
 
-Return as a string denoted in the same fashion as `camel}}`, but with the first letter also capitalized.
+Return as a string denoted in the same fashion as `camel`, but with the first letter also capitalized.
 
-```javascript
-{{pascal}}('test string')
+```
+{{--pascal--}}('test string')
 //=> "TestString"
 ```
 
@@ -124,8 +134,8 @@ Return as a string denoted in the same fashion as `camel}}`, but with the first 
 
 Return as a lower case, slash separated string.
 
-```javascript
-{{path}}('test string')
+```
+{{--path--}}('test string')
 //=> "test/string"
 ```
 
@@ -133,8 +143,8 @@ Return as a lower case, slash separated string.
 
 Return as a lower case, space separated string with the first letter upper case.
 
-```javascript
-{{sentence}}('testString')
+```
+{{--sentence--}}('testString')
 //=> "Test string"
 ```
 
@@ -142,8 +152,8 @@ Return as a lower case, space separated string with the first letter upper case.
 
 Return as a lower case, underscore separated string.
 
-```javascript
-{{snake}}('test string')
+```
+{{--snake--}}('test string')
 //=> "test_string"
 ```
 
@@ -151,8 +161,8 @@ Return as a lower case, underscore separated string.
 
 Return as a string with every character case reversed.
 
-```javascript
-{{swap}}('Test String')
+```
+{{--swap--}}('Test String')
 //=> "tEST sTRING"
 ```
 
@@ -160,8 +170,8 @@ Return as a string with every character case reversed.
 
 Return as a space separated string with the first character of every word upper cased.
 
-```javascript
-{{title}}('a simple test')
+```
+{{--title--}}('a simple test')
 //=> "A Simple Test"
 ```
 
@@ -169,8 +179,8 @@ Return as a space separated string with the first character of every word upper 
 
 Return the string in upper case.
 
-```javascript
-{{upper}}('test string')
+```
+{{--upper--}}('test string')
 //=> "TEST STRING"
 ```
 
